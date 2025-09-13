@@ -1,11 +1,11 @@
-// backend/routes/repo.js
+
 import express from "express";
 import fetch from "node-fetch";
 import { generateReadme } from "../utils/gemini.js";
 
 const router = express.Router();
 
-// Public repo
+
 router.post("/public", async (req, res) => {
   try {
     const { owner, repo } = req.body || {};
