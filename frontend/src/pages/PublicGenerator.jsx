@@ -27,7 +27,8 @@ export default function PublicGenerator() {
       const owner = parts[0];
       const repo = parts[1].replace(/\.git$/, "");
       setLoading(true);
-      const res = await axios.post(`${API_URL}/repos`, { owner, repo });
+     const res = await axios.post(`${API_URL}/repos/public`, { owner, repo });
+
 
       setReadme(res.data.readme || "");
     } catch (err) {
