@@ -2,6 +2,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./PublicGeneratorstyle.css";
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 export default function PublicGenerator() {
   const [repoUrl, setRepoUrl] = useState("");
@@ -25,10 +27,8 @@ export default function PublicGenerator() {
       const owner = parts[0];
       const repo = parts[1].replace(/\.git$/, "");
       setLoading(true);
-      const res = await axios.post("http://localhost:5000/api/repo/public", {
-        owner,
-        repo,
-      });
+      const res = await axios.post(`${API_URL}/repos`, { owner, repo });
+
       setReadme(res.data.readme || "");
     } catch (err) {
       const msg = err?.response?.data?.error || err?.message || "Request failed";
