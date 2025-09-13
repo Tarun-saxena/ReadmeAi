@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MainPagestyle.css";
+import "./mainpagestyle.css";  
+
 
 export default function MainPage() {
   return (
