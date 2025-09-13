@@ -41,7 +41,7 @@ export default function PublicGenerator() {
   function copyReadme() {
     if (!readme) return;
     navigator.clipboard.writeText(readme);
-    alert("README copied to clipboard ✅");
+    alert("README copied to clipboard ");
   }
 
   function downloadReadme() {
@@ -55,7 +55,7 @@ export default function PublicGenerator() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    alert("README downloaded ✅");
+    alert("README downloaded ");
   }
 
   return (
