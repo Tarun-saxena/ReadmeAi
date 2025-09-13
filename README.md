@@ -3,6 +3,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/Tarun-saxena/ReadmeAi?style=social)](https://github.com/Tarun-saxena/ReadmeAi)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  <!-- Assuming MIT license; adjust if different -->
 
+![Site Screenshot](https://i.postimg.cc/pr6Mrdk3/Screenshot-2025-09-13-190134.png)
+![Site Screenshot](https://i.postimg.cc/vTBdGn7W/Screenshot-2025-09-13-192941.png)
 
 ## Description
 
