@@ -13,7 +13,12 @@ router.post("/public", async (req, res) => {
       return res.status(400).json({ error: "owner and repo are required" });
     }
 
-    const ghRes = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+    const ghRes = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+      }
+
+    });
     if (!ghRes.ok) {
       const text = await ghRes.text();
       return res.status(ghRes.status).json({ error: "GitHub API error", details: text });
