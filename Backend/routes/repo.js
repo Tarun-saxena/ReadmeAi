@@ -14,9 +14,10 @@ router.post("/public", async (req, res) => {
     }
 
     const ghRes = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
-     Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-  Accept: "application/vnd.github+json"
-
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        Accept: "application/vnd.github+json"
+      }
     });
     if (!ghRes.ok) {
       const text = await ghRes.text();
